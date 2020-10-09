@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>A List of All Available Reviews</title>
+    <link href="/css/style.css" rel="stylesheet"/>
+
+</head>
+
+
+<header>
+    <h1>Welcome to the Travel Reviews</h1>
+    <br>
+</header>
+
+<main>
+    <ul>
+        <li th:each="review: ${reviewsModel}"><a th:href="@{/review(id=${review.id})}" th:text="${review.name}"></a></li>
+    </ul>
+</main>
+<br>
+<section class="pictures">
+<article class="pictures_column">
+<img th:src="@{/images/travel.jpg}"/>
+    <p>
+        People love to get away from it all, taking time away from the norm, and just escape it all.
+        but what is the best way to travel, do you enjoy traveling plane, taking a cruise, or loading up the car and going for a drive.
+        We will explore the travel reviews for taking a plane, a cruise, or traveling by car.
+    </p>
+</article>
+<article class="pictures_column">
+<img th:src="@{/images/beach.jpg}"/>
+    <p>In this review we will ask ourselves what do I want when I travel, how much should I pack where do I want to stay at for my vacation.
+        How much cash should I take, do I need to think about travel insurance.</p>
+</article>
+<article class="pictures_column">
+<img th:src="@{/images/happy.jpg}"/>
+    <p>We will review how travel makes happy and how getting away will make you stress free, and how seeing new things and attractions helps with your piece of mind.</p>
+</article>
+</section>
+
+<footer>
+    <small>&copy travel review</small>
+</footer>
+
+</body>
+</html>
